@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | tanuja Khandare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+  .company-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .company-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #fff;
+    padding: 5px;
+  }
+
+  .document-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .offer-btn,
+  .certificate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .offer-btn {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+  }
+
+  .certificate-btn {
+    background: linear-gradient(135deg, #7b61ff, #b14cff);
+    color: #fff;
+  }
+
+  .offer-btn:hover,
+  .certificate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  .project-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  @media (max-width:768px) {
+    .project-image {
+      aspect-ratio: 16/9;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    #home {
+      padding-top: 90px;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 70px;
+      right: -100%;
+      width: 250px;
+      height: calc(100vh - 70px);
+      background: #0b1020;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-top: 30px;
+      transition: right 0.3s ease;
+      z-index: 9998;
+    }
+
+    .nav-links.active {
+      right: 0;
+    }
+  }
+</style>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Tanuja<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HOME ========== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal">👋 Hello, I'm</p>
+      <h1 class="hero-name reveal">
+        <span class="name-line">Tanuja</span>
+        <span class="name-line accent">Khandare</span>
+      </h1>
+      <div class="hero-title reveal">
+        <span class="typed-text" id="typedText">Web Developer</span><span class="cursor">|</span>
+      </div>
+      <p class="hero-desc reveal">I am a passionate Web Developer with a strong interest in creating responsive,
+        user-friendly, and interactive websites.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+
+    </div>
+    <div class="hero-visual reveal">
+      <div class="avatar-wrapper">
+        <div class="avatar-ring"></div>
+
+        <div class="avatar-img">
+          <img src="images/tanu.jpeg" alt="Tanuja Khandare">
+        </div>
+
+        <div class="avatar-badge">Open to Work</div>
+
+      </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder"><img src="images/tanu graduate.jpeg" alt="Tanuja"></div>
+            <div class="about-img-decor"></div>
+          </div>
+          <div class="about-social">
+            <a href="https://github.com/tanuja-student" target="_blank" class="social-link" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tanuja-khandare" target="_blank" class="social-link" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanujakhandare50@gmail.com" target="_blank"
+              class="social-link" title="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.2l-8 6.2-8-6.2V6l8 6 8-6v1.2z" />
+              </svg>
+            </a>
+          </div>
+          <a href="images/tanuja_resume.pdf" target="_blank" class="btn btn-primary download-btn"
+            style="margin-top:30px;">
+
+            <span> Download CV</span>
+
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <path d="M7 10l5 5 5-5"></path>
+              <path d="M12 15V3"></path>
+            </svg>
+
+          </a>
+        </div>
+        <div class="about-text-col reveal">
+          <p class="about-intro">I'm <strong>Tanuja Khandare</strong> from Talandage, Kolhapur. I have completed my
+            Bachelor of Computer Applications (BCA) from Shivaji University, Kolhapur in April 2025, and I am currently
+            pursuing my Master of Computer Applications (MCA) from DYP University, Talasande.</p>
+          <p class="about-body">I have also completed a 6-month internship in web development, working on both frontend
+            and backend technologies like HTML, CSS, JavaScript, Bootstrap, and PHP. I come from a nuclear family and
+            consider myself a self-motivated, hardworking, and disciplined person. I am focused on my goals and always
+            eager to learn and improve my skills with consistency and a positive attitude.</p>
+          <div class="about-info-grid">
+            <div class="info-item"><span class="info-label">Name</span><span class="info-val">Tanuja Khandare</span>
+            </div>
+            <div class="info-item"><span class="info-label">Email</span><span
+                class="info-val">tanujakhandare50@gmail.com</span></div>
+            <div class="info-item"><span class="info-label">Location</span><span class="info-val">Kolhapur, India</span>
+            </div>
+            <div class="info-item"><span class="info-label">Pincode</span><span
+                class="info-val available-tag">416236</span></div>
+          </div>
+
+          <!-- EDUCATION inside About -->
+          <div class="education-block reveal">
+            <h3 class="sub-section-title">Education</h3>
+            <div class="edu-timeline">
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                  <span class="edu-year">Aug 2022 – March 2025</span>
+                  <h4>BCA (Bachelor of computer application)</h4>
+                  <p>Kamala College (Autonomous) , Kolhapur<br>Pecentage:70.55%</p>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                  <span class="edu-year">Jun 2021 – March 2022</span>
+                  <h4>HSC — Science (PCM)</h4>
+                  <p>Janata Madhyamik Vidyalay & JR. College , Hupari<br>Pecentage: 55.83%</p>
+                </div>
+              </div>
+              <div class="edu-item">
+                <div class="edu-dot"></div>
+                <div class="edu-content">
+                  <span class="edu-year"> Jun 2019 – March 2020</span>
+                  <h4>SSC — State Board</h4>
+                  <p>Bapuso Hupre Highschool And Junior College, Pattankodoli<br>Pecentage: 81.40%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-core reveal">
+        <div class="core-skill-card">
+          <div class="core-skill-logo html-logo">
+            <svg viewBox="0 0 452 520" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <path fill="#e44d26" d="M41 460L0 0h451l-41 460-185 52z" />
+              <path fill="#f16529" d="M226 488l149-41 35-394H226z" />
+              <path fill="#ebebeb"
+                d="M226 208H109l7 77h110zm0-83H100l7 77h119zm0 260l-1 1-79-22-5-57h-75l10 109 149 41z" />
+              <path fill="#fff" d="M226 208v77h102l-9 103-93 26v80l149-41 10-114 1-131zm0-83v77h119l-7-77z" />
+            </svg>
+          </div>
+          <h3>HTML</h3>
+          <p>Semantic markup, accessibility, SEO-friendly structure, Web components</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:92%"></div>
+          </div>
+          <span class="skill-pct">92%</span>
+        </div>
+        <div class="core-skill-card">
+          <div class="core-skill-logo css-logo">
+            <svg viewBox="0 0 452 520" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <path fill="#0170ba" d="M41 460L0 0h451l-41 460-185 52z" />
+              <path fill="#019bc6" d="M226 488l149-41 35-394H226z" />
+              <path fill="#ebebeb"
+                d="M226 208H109l7 77h110zm0-83H100l7 77h119zm0 260l-1 1-79-22-5-57h-75l10 109 149 41z" />
+              <path fill="#fff" d="M226 208v77h109l-10 112-99 27v80l148-41 1-11 17-189 2-55zm0-83v77h118l1-11 5-66z" />
+            </svg>
+          </div>
+          <h3>CSS</h3>
+          <p>Flexbox, Grid, Animations, Responsive Design,Styling Web Pages </p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:88%"></div>
+          </div>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="core-skill-card">
+          <div class="core-skill-logo js-logo">
+            <svg viewBox="0 0 630 630" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <rect width="630" height="630" fill="#f7df1e" rx="20" />
+              <path
+                d="M423 492c13 22 29 37 58 37 24 0 40-12 40-29 0-20-16-27-43-39l-15-6c-43-18-71-41-71-89 0-44 34-78 86-78 37 0 64 13 83 47l-45 29c-10-18-21-25-38-25-17 0-28 11-28 25 0 18 11 25 36 36l15 6c50 22 79 44 79 94 0 54-42 82-99 82-56 0-92-27-109-62zm-220 5c9 16 18 30 38 30 19 0 32-8 32-38V270h57v221c0 63-37 91-90 91-48 0-76-25-91-56z" />
+            </svg>
+          </div>
+          <h3>JavaScript</h3>
+          <p>ES6+, Async/Await, DOM APIs, REST APIs, TypeScript</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:85%"></div>
+          </div>
+          <span class="skill-pct">85%</span>
+        </div>
+      </div>
+
+      <div class="skills-core reveal">
+        <div class="core-skill-card">
+          <div class="core-skill-logo bootstrap-logo">
+            <svg viewBox="0 0 118 94" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <path fill="#7952B3" d="M0 0h118v94H0z" rx="12" />
+              <path fill="#fff"
+                d="M28 18h39c16 0 27 9 27 23 0 10-6 17-15 20 12 3 19 11 19 23 0 17-13 28-33 28H28zm21 17v18h14c7 0 11-3 11-9s-4-9-11-9zm0 33v20h17c8 0 13-4 13-10s-5-10-13-10z" />
+            </svg>
+          </div>
+          <h3>Bootstrap</h3>
+          <p>Responsive layouts, Grid System, Components, Utilities, Mobile-First Design</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:90%"></div>
+          </div>
+          <span class="skill-pct">90%</span>
+        </div>
+
+        <div class="core-skill-card">
+          <div class="core-skill-logo php-logo">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <ellipse cx="256" cy="256" rx="220" ry="140" fill="#777BB4" />
+              <text x="256" y="285" font-size="95" text-anchor="middle" fill="white" font-family="Arial"
+                font-weight="bold">
+                PHP
+              </text>
+            </svg>
+          </div>
+          <h3>PHP</h3>
+          <p>Server-Side Development, CRUD Operations, Authentication, Form Handling, APIs</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:82%"></div>
+          </div>
+          <span class="skill-pct">82%</span>
+        </div>
+
+        <div class="core-skill-card">
+          <div class="core-skill-logo mysql-logo">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
+              <path fill="#00758F" d="M256 50c-90 0-163 73-163 163s73 163 163 163 163-73 163-163S346 50 256 50z" />
+              <path fill="#fff"
+                d="M160 240c25-50 80-80 140-80 35 0 68 10 92 28-20-8-45-10-66-3 22 8 40 24 50 46-12-8-27-12-43-11 16 12 25 31 25 51 0 39-32 71-71 71-43 0-77-39-72-82-23-6-42-20-55-40z" />
+            </svg>
+          </div>
+          <h3>MySQL</h3>
+          <p>Database Design, SQL Queries, Joins, Stored Procedures, Data Management</p>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" style="--pct:86%"></div>
+          </div>
+          <span class="skill-pct">86%</span>
+        </div>
+      </div>
+      <div class="skills-extra-grid reveal">
+        <div class="skill-pill">
+          <span class="pill-icon git-clr">🔀</span> Git & GitHub
+          <div class="pill-bar" style="--p:90%"></div>
+        </div>
+        <div class="skill-pill">
+          <span class="pill-icon py-clr">🐍</span> Python
+          <div class="pill-bar" style="--p:70%"></div>
+        </div>
+        <div class="skill-pill">
+          <span class="pill-icon tableau-clr">📊</span> Tableau
+          <div class="pill-bar" style="--p:75%"></div>
+        </div>
+        <div class="skill-pill">
+          <span class="pill-icon sql-clr">🗄</span> SQL
+          <div class="pill-bar" style="--p:72%"></div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">My <span class="accent">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="exp-timeline">
+
+        <!-- Experience Item -->
+        <div class="exp-item reveal">
+
+          <div class="exp-dot-wrap">
+            <div class="exp-dot"></div>
+            <div class="exp-line"></div>
+          </div>
+
+          <div class="exp-card">
+
+            <!-- Header -->
+            <div class="exp-header">
+
+              <div class="company-details">
+                <img src="images\wolfox.jpg" alt="Company Logo" class="company-logo">
+
+                <div>
+                  <h3 class="exp-role">Web Development Intern</h3>
+                  <p class="exp-company">Wolfox Services Pvt. Ltd.</p>
+                </div>
+              </div>
+
+              <span class="exp-badge">October 2024</span>
+
+            </div>
+
+            <!-- Description -->
+            <ul class="exp-list">
+              <li>Developed dynamic and responsive web applications using HTML, CSS, JavaScript,Bootstrap and PHP.</li>
+              <li>Created user-friendly interfaces and interactive website features.</li>
+              <li>Worked on front-end and back-end development tasks.</li>
+              <li>Gained hands-on experience through real-world web development projects..</li>
+            </ul>
+
+            <!-- Tags -->
+            <div class="exp-tags">
+              <span class="tag">Html</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Php</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="document-buttons">
+
+              <a href="images\internship letter.jpeg" target="_blank" class="offer-btn">
+                <i class="fas fa-file-alt"></i> View Offer Letter
+              </a>
+
+              <a href="images\internship certificate.jpeg" target="_blank" class="certificate-btn">
+                <i class="fas fa-award"></i> View Certificate
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-image">
+              <img src="images\panchkarma.png" alt="Portfolio Website">
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </a>
+              <a href="#" class="icon-link" title="Live Demo" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-number">01</div>
+
+          <h3 class="project-title">Panchkarma Website<p class="exp-company">Responsive (All Devices)</p></h3>
+
+          <p class="project-desc">
+            A responsive healthcare website for a Panchkarma center featuring treatment information, services,
+            doctors, contact form, and an attractive user-friendly interface.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/tanuja-student/panchkarma" class="project-btn" target="_blank">GitHub →</a>
+            <a href="https://tanuja-student.github.io/panchkarma/" class="project-btn project-btn-live"
+              target="_blank">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-image">
+              <img src="images\resort.png" alt="Portfolio Website">
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg></a>
+              <a href="#" class="icon-link" title="Live Demo" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="project-number">02</div>
+
+          <h3 class="project-title">Restaurant Website<p class="exp-company">Responsive (All Devices)</p></h3>
+
+          <p class="project-desc">
+            Developed a responsive restaurant website featuring a homepage, menu, gallery, about, contact, and
+            reservation sections with a modern, user-friendly design.
+          </p>
+
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://tanuja-student.github.io/restaurant1/" class="project-btn" target="_blank">GitHub →</a>
+            <a href="https://tanuja-student.github.io/restaurant1/" class="project-btn project-btn-live"
+              target="_blank">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-image">
+              <img src="images\resort2.png" alt="Portfolio Website">
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg></a>
+              <a href="#" class="icon-link" title="Live Demo" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="project-number">03</div>
+          <h3 class="project-title"> Restaurant-2 Website<p class="exp-company">Responsive (All Devices)</p></h3>
+          <p class="project-desc">
+            Developed a responsive restaurant website featuring a homepage, menu, gallery, about, contact, and
+            reservation sections with a modern, user-friendly design.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Bootstrap</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/tanuja-student/resort2" class="project-btn" target="_blank">GitHub →</a>
+            <a href="https://tanuja-student.github.io/resort2/" class="project-btn project-btn-live"
+              target="_blank">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-image">
+              <img src="images\pharmacy.png" alt="Portfolio Website">
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg></a>
+              <a href="#" class="icon-link" title="Live Demo" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="project-number">04</div>
+          <h3 class="project-title">Pharmacy management System<br><p class="exp-company">laptop-responsive</p></h3>
+          <p class="project-desc">
+           Developed a laptop-responsive pharmacy management website for medicine inventory, billing, customer management, and stock tracking.
+          </p>
+          <div class="project-tags">
+            <span class="tag">.NET</span>
+            <span class="tag">C#</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/tanuja-student/pharmacy" class="project-btn" target="_blank">GitHub →</a>
+            <a href="https://tanuja.bsite.net" class="project-btn project-btn-live" target="_blank">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-image">
+              <img src="images\electricity.png" alt="Portfolio Website">
+            </div>
+            <div class="project-links">
+              <a href="#" class="icon-link" title="GitHub" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg></a>
+              <a href="#" class="icon-link" title="Live Demo" target="_blank"><svg width="18" height="18"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg></a>
+            </div>
+          </div>
+          <div class="project-number">05</div>
+          <h3 class="project-title">Electricity Consumption Dashboard<p class="exp-company">Responsive (All Devices)</p></h3>
+          <p class="project-desc">
+            Developed an interactive Tableau dashboard to analyze electricity consumption trends, usage patterns, and
+            key performance insights.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Tableau</span>
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Dashboard</span>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/tanuja-student/Electricity-Consumption-" class="project-btn"
+              target="_blank">GitHub →</a>
+            <a href=" https://tanuja-student.github.io/Electricity-Consumption-/" class="project-btn project-btn-live"
+              target="_blank">Live Demo →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CERTIFICATES ========== -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">My <span class="accent">Certificates</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon"></div>
+          <div class="cert-badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Wolfox Services Pvt. Ltd.</span>
+            <h3 class="cert-title">Full Stack Web Development Internship Certificate</h3>
+            <p class="cert-date">Completed practical training in HTML, CSS, JavaScript, PHP, and responsive web
+              development.</p>
+          </div>
+          <a href="images\internship certificate.jpeg" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon cert-ribbon-2"></div>
+          <div class="cert-badge cert-badge-2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">NSDC</span>
+            <h3 class="cert-title">AWS Certification</h3>
+            <p class="cert-date">Learned cloud computing fundamentals, AWS services, deployment concepts, and cloud
+              infrastructure management.</p>
+          </div>
+          <a href="images\Aws Nsdc certificate.png" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon cert-ribbon-3"></div>
+          <div class="cert-badge cert-badge-3">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">NSDC</span>
+            <h3 class="cert-title">SQL IBM Certification</h3>
+            <p class="cert-date">Gained expertise in SQL queries, database design, data manipulation, and database
+              administration.</p>
+          </div>
+          <a href="images\Sql IBM Certificate.png" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon"></div>
+          <div class="cert-badge">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">Online Training Program</span>
+            <h3 class="cert-title">Data Analytics Certification</h3>
+            <p class="cert-date">Developed skills in data analysis, visualization, reporting, and business intelligence
+              techniques.</p>
+          </div>
+          <a href="images\data_analyst.png" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon cert-ribbon-2"></div>
+          <div class="cert-badge cert-badge-2">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">IBM</span>
+            <h3 class="cert-title">JavaScript Certificate</h3>
+            <p class="cert-date">Learned JavaScript fundamentals, DOM manipulation, ES6 features, and interactive web
+              development.</p>
+          </div>
+          <a href="images\javascript certificate.jpeg" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-ribbon cert-ribbon-3"></div>
+          <div class="cert-badge cert-badge-3">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <span class="cert-issuer">College Technical Event</span>
+            <h3 class="cert-title">3D Model Certificate</h3>
+            <p class="cert-date">
+              Successfully designed and presented a 3D model of a Sensor-Based Security System during a
+              college-organized technical event.
+            </p>
+          </div>
+          <a href="images\3d model certificate.jpeg" class="cert-link" target="_blank">View Credential →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-tagline">Have a project idea or just want to say hi? My inbox is always open.</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <p class="ci-label">Email</p><a href="mailto:alex@email.com"
+                  class="ci-val">tanujakhandare50@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                </svg>
+              </div>
+              <div>
+                <p class="ci-label">Phone</p><a href="tel:+919876543210" class="ci-val">+91 8669549455</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon-wrap">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <p class="ci-label">Location</p><span class="ci-val">kolhapur, Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/tanuja-student" target="_blank" class="social-link" title="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/tanuja-khandare" target="_blank" class="social-link" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tanujakhandare50@gmail.com" target="_blank"
+              class="social-link" title="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 3.2l-8 6.2-8-6.2V6l8 6 8-6v1.2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="Enter your email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="Project Inquiry" required />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span>Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+          <p class="form-success" id="formSuccess">✅ Message sent! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Tanuja<span class="logo-bracket">/&gt;</span>
+      </a>
+      <p class="footer-copy">© 2026 Tanuaja Khanadare. Built with ❤️ using HTML, CSS & JS.</p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
